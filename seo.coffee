@@ -161,7 +161,7 @@ getCurrentRouteName = ->
   return routeName
 
 # Get seo settings depending on route
-Deps.autorun( ->
+/***Deps.autorun( ->
   currentRouteName = getCurrentRouteName()
   return unless currentRouteName
   Meteor.subscribe('seoByRouteName', currentRouteName)
@@ -173,4 +173,4 @@ Deps.autorun( ->
   currentRouteName = getCurrentRouteName()
   settings = SeoCollection.findOne({route_name: currentRouteName}) or {}
   SEO.set(settings)
-)
+) ***/
